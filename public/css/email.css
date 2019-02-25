@@ -1,0 +1,21 @@
+.email-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.email-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+}
+
+.email__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.email__description {
+    text-align: center;
+}

@@ -1,0 +1,38 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/email.css">
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <main>
+        <% if (mails.length > 0) { %>
+        <div class="grid">
+            <% for (let email of mails) { %>
+            <article class="card email-item">
+                <header class="card__header">
+                    <h1 class="email__title">
+                        <%= email.name %>
+                    </h1>
+                </header>
+                <hr>
+                <div class="card__content">
+                    <p class="email__description">
+                        <%= email.email %>
+                    </p>
+                </div>
+                <div class="card__actions">
+                    <a href="/edit-email/<%= email._id %>?edit=true" class="btn">Edit</a>
+                    <form action="/delete-email" method="POST">
+                        <input type="hidden" value="<%= email._id %>" name="emailId">
+                        <button class="btn" type="submit">Delete</button>
+                    </form>
+                </div>
+            </article>
+            <% } %>
+        </div>
+        <% } else { %>
+        <h1 style="text-align:center;">No Emails Found!</h1>
+        <% } %>
+    </main>
+    <%- include('includes/end.ejs') %>
