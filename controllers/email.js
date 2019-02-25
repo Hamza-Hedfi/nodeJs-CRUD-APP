@@ -34,7 +34,6 @@ exports.getEditEmail = (req, res, next) => {
   }
   const mailId = req.params.emailId;
   Email.findById(mailId)
-    // Product.findById(prodId)
     .then(email => {
       if (!email) {
         return res.redirect('/');
