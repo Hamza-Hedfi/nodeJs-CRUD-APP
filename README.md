@@ -18,7 +18,7 @@ Just test it :
 - Clone the repo `git clone https://github.com/Hamza-Hedfi/nodeJs-CRUD-APP.git`
 - Navigate (**c**hange **d**irectory) to the cloned folder `cd nodeJs-CRUD-APP`
 - `npm install` to install the project dependencies.
-- `node start`
+- `npm start`
 - Visit `127.0.0.1:3000`
 
 # Contact/Getting Help
